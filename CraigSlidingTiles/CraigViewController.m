@@ -14,11 +14,25 @@
 
 @implementation CraigViewController
 
-@synthesize gameBoard, winNotice;
+@synthesize gameBoard, winNotice, startNewButton;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // polish
+    // Draw a custom gradient
+    CAGradientLayer *btnGradient = [CAGradientLayer layer];
+    btnGradient.frame = self.startNewButton.bounds;
+    btnGradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:102.0f / 255.0f green:102.0f / 255.0f blue:102.0f / 255.0f alpha:1.0f] CGColor],
+                          (id)[[UIColor colorWithRed:51.0f / 255.0f green:51.0f / 255.0f blue:51.0f / 255.0f alpha:1.0f] CGColor],
+                          nil];
+    [self.startNewButton.layer insertSublayer:btnGradient atIndex:0];
+    
+    CALayer *btnLayer = [self.startNewButton layer];
+    [btnLayer setMasksToBounds:YES];
+    [btnLayer setCornerRadius:10.0f];
+
     
     // autostart
     [self startGame];
@@ -103,12 +117,18 @@
         
         if(i != posValue) return NO;
     }
-    gameInProgress = NO;
-    self.winNotice.hidden = NO;
+    //if([[gameValues objectAtIndex:0] intValue]) return NO;
     return YES;
 }
 
+- (void)handleWin {
+    gameInProgress = NO;
+    self.winNotice.hidden = NO;
+    [self playASound:@"cymbals"];
+}
+
 - (IBAction) startOverTapped:(id)sender {
+    [self playASound:@"floop_sfx"];
     [self startGame];
 }
 
@@ -172,13 +192,15 @@
     zeroButton.hidden = YES;
     UIButton *movedButton = [gameViews objectAtIndex:toIndex];
     
-    [self playMoveSound];
+    [self playASound:@"click_x"];
     [UIView animateWithDuration:0.3 animations:^{
         movedButton.frame = [self getRectForObjectAtIndex:toIndex];
     } completion:^(BOOL finished){
         zeroButton.frame = [self getRectForObjectAtIndex:fromIndex];
         zeroButton.hidden = NO;
-        [self checkWin];
+        if([self checkWin]) {
+            [self handleWin];
+        }
     }];
 }
 
@@ -189,10 +211,10 @@
     return CGRectMake(col * 75, row * 75, TILESIZE, TILESIZE);
 }
 
-- (void) playMoveSound {
+- (void) playASound:(NSString *)soundName {
     SystemSoundID audioEffect;
     
-    NSString *path  = [[NSBundle mainBundle] pathForResource:@"hit-01" ofType:@"wav"];
+    NSString *path  = [[NSBundle mainBundle] pathForResource:soundName ofType:@"wav"];
     NSURL *pathURL = [NSURL fileURLWithPath : path];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
     AudioServicesPlaySystemSound(audioEffect);

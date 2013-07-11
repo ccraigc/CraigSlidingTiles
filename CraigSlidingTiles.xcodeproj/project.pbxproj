@@ -20,8 +20,11 @@
 		01614678178F2854008D08B8 /* CraigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01614676178F2854008D08B8 /* CraigViewController.xib */; };
 		0182B430178F473600FB2D40 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0182B42F178F473600FB2D40 /* QuartzCore.framework */; };
 		0182B433178F48D900FB2D40 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0182B432178F48D900FB2D40 /* AudioToolbox.framework */; };
-		0182B435178F49B700FB2D40 /* hit-pipe.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0182B434178F49B700FB2D40 /* hit-pipe.wav */; };
-		0182B437178F4A2300FB2D40 /* hit-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0182B436178F4A2300FB2D40 /* hit-01.wav */; };
+		0182B43B178F4F3500FB2D40 /* floop_sfx.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0182B439178F4F3500FB2D40 /* floop_sfx.wav */; };
+		0182B43D178F4FDC00FB2D40 /* click_x.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0182B43C178F4FDC00FB2D40 /* click_x.wav */; };
+		0182B43F178F510B00FB2D40 /* cymbals.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0182B43E178F510B00FB2D40 /* cymbals.wav */; };
+		0182B442178F525D00FB2D40 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0182B440178F525D00FB2D40 /* Icon.png */; };
+		0182B443178F525D00FB2D40 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0182B441178F525D00FB2D40 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +46,11 @@
 		01614677178F2854008D08B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CraigViewController.xib; sourceTree = "<group>"; };
 		0182B42F178F473600FB2D40 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0182B432178F48D900FB2D40 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		0182B434178F49B700FB2D40 /* hit-pipe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "hit-pipe.wav"; sourceTree = "<group>"; };
-		0182B436178F4A2300FB2D40 /* hit-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "hit-01.wav"; sourceTree = "<group>"; };
+		0182B439178F4F3500FB2D40 /* floop_sfx.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = floop_sfx.wav; sourceTree = "<group>"; };
+		0182B43C178F4FDC00FB2D40 /* click_x.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click_x.wav; sourceTree = "<group>"; };
+		0182B43E178F510B00FB2D40 /* cymbals.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cymbals.wav; sourceTree = "<group>"; };
+		0182B440178F525D00FB2D40 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		0182B441178F525D00FB2D40 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,8 @@
 		0161464C178F2854008D08B8 = {
 			isa = PBXGroup;
 			children = (
+				0182B440178F525D00FB2D40 /* Icon.png */,
+				0182B441178F525D00FB2D40 /* Icon@2x.png */,
 				0182B432178F48D900FB2D40 /* AudioToolbox.framework */,
 				01614661178F2854008D08B8 /* CraigSlidingTiles */,
 				0161465A178F2854008D08B8 /* Frameworks */,
@@ -95,8 +103,9 @@
 		01614661178F2854008D08B8 /* CraigSlidingTiles */ = {
 			isa = PBXGroup;
 			children = (
-				0182B436178F4A2300FB2D40 /* hit-01.wav */,
-				0182B434178F49B700FB2D40 /* hit-pipe.wav */,
+				0182B43E178F510B00FB2D40 /* cymbals.wav */,
+				0182B43C178F4FDC00FB2D40 /* click_x.wav */,
+				0182B439178F4F3500FB2D40 /* floop_sfx.wav */,
 				0161466A178F2854008D08B8 /* CraigAppDelegate.h */,
 				0161466B178F2854008D08B8 /* CraigAppDelegate.m */,
 				01614673178F2854008D08B8 /* CraigViewController.h */,
@@ -178,8 +187,11 @@
 				01614670178F2854008D08B8 /* Default@2x.png in Resources */,
 				01614672178F2854008D08B8 /* Default-568h@2x.png in Resources */,
 				01614678178F2854008D08B8 /* CraigViewController.xib in Resources */,
-				0182B435178F49B700FB2D40 /* hit-pipe.wav in Resources */,
-				0182B437178F4A2300FB2D40 /* hit-01.wav in Resources */,
+				0182B43B178F4F3500FB2D40 /* floop_sfx.wav in Resources */,
+				0182B43D178F4FDC00FB2D40 /* click_x.wav in Resources */,
+				0182B43F178F510B00FB2D40 /* cymbals.wav in Resources */,
+				0182B442178F525D00FB2D40 /* Icon.png in Resources */,
+				0182B443178F525D00FB2D40 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

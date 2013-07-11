@@ -19,6 +19,7 @@
 - (void) startGame;
 
 - (BOOL) checkWin;
+- (void)handleWin;
 
 - (IBAction) startOverTapped:(id)sender;
 
@@ -26,7 +27,10 @@
 
 - (void) moveFrom:(int)fromIndex to:(int)toIndex;
 
+- (void) playASound:(NSString *)soundName;
+
 @property IBOutlet UIView *gameBoard;
 @property IBOutlet UILabel *winNotice;
+@property IBOutlet UIButton *startNewButton;
 
 @end
