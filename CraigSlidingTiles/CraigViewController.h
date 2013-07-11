@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CraigViewController : UIViewController
+@interface CraigViewController : UIViewController {
+    NSMutableArray *gameValues; // zero is open
+    NSMutableArray *gameViews;
+}
+
+- (UIButton *) addTileWithValue: (int)value atPosition: (int)position;
+
+- (void) startGame;
+
+- (BOOL) checkWin;
+
+- (IBAction) startOverTapped:(id)sender;
+
+- (void) tileTapped:(id)sender;
+
+@property IBOutlet UIView *gameBoard;
+@property IBOutlet UILabel *winNotice;
 
 @end
