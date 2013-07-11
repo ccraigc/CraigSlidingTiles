@@ -38,7 +38,7 @@
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIView" id="32707648">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">310</int>
+						<int key="NSvFlags">293</int>
 						<string key="NSFrame">{{10, 9}, {300, 300}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
@@ -48,8 +48,8 @@
 					</object>
 					<object class="IBUILabel" id="204772754">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">-2147483356</int>
-						<string key="NSFrame">{{10, 340}, {300, 84}}</string>
+						<int key="NSvFlags">-2147483355</int>
+						<string key="NSFrame">{{10, 312}, {300, 84}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="557414166"/>
@@ -84,7 +84,6 @@
 						<string key="NSFrame">{{205, 503}, {105, 36}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -121,7 +120,7 @@
 				<reference key="NSNextKeyView" ref="32707648"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC41ODc0NjkwMDgxIDAgMC44Njc3NjA2OTk3AA</bytes>
+					<bytes key="NSRGB">MC41ODQyOTMzNTggMC4zMjEyODc4MzE1IDAuODY3NzYwNjk5NwA</bytes>
 				</object>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>

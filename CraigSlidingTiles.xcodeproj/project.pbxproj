@@ -18,6 +18,10 @@
 		01614672178F2854008D08B8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01614671178F2854008D08B8 /* Default-568h@2x.png */; };
 		01614675178F2854008D08B8 /* CraigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01614674178F2854008D08B8 /* CraigViewController.m */; };
 		01614678178F2854008D08B8 /* CraigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01614676178F2854008D08B8 /* CraigViewController.xib */; };
+		0182B430178F473600FB2D40 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0182B42F178F473600FB2D40 /* QuartzCore.framework */; };
+		0182B433178F48D900FB2D40 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0182B432178F48D900FB2D40 /* AudioToolbox.framework */; };
+		0182B435178F49B700FB2D40 /* hit-pipe.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0182B434178F49B700FB2D40 /* hit-pipe.wav */; };
+		0182B437178F4A2300FB2D40 /* hit-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0182B436178F4A2300FB2D40 /* hit-01.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		01614673178F2854008D08B8 /* CraigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CraigViewController.h; sourceTree = "<group>"; };
 		01614674178F2854008D08B8 /* CraigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CraigViewController.m; sourceTree = "<group>"; };
 		01614677178F2854008D08B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CraigViewController.xib; sourceTree = "<group>"; };
+		0182B42F178F473600FB2D40 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0182B432178F48D900FB2D40 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0182B434178F49B700FB2D40 /* hit-pipe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "hit-pipe.wav"; sourceTree = "<group>"; };
+		0182B436178F4A2300FB2D40 /* hit-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "hit-01.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0182B433178F48D900FB2D40 /* AudioToolbox.framework in Frameworks */,
+				0182B430178F473600FB2D40 /* QuartzCore.framework in Frameworks */,
 				0161465C178F2854008D08B8 /* UIKit.framework in Frameworks */,
 				0161465E178F2854008D08B8 /* Foundation.framework in Frameworks */,
 				01614660178F2854008D08B8 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +66,7 @@
 		0161464C178F2854008D08B8 = {
 			isa = PBXGroup;
 			children = (
+				0182B432178F48D900FB2D40 /* AudioToolbox.framework */,
 				01614661178F2854008D08B8 /* CraigSlidingTiles */,
 				0161465A178F2854008D08B8 /* Frameworks */,
 				01614658178F2854008D08B8 /* Products */,
@@ -73,6 +84,7 @@
 		0161465A178F2854008D08B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0182B42F178F473600FB2D40 /* QuartzCore.framework */,
 				0161465B178F2854008D08B8 /* UIKit.framework */,
 				0161465D178F2854008D08B8 /* Foundation.framework */,
 				0161465F178F2854008D08B8 /* CoreGraphics.framework */,
@@ -83,6 +95,8 @@
 		01614661178F2854008D08B8 /* CraigSlidingTiles */ = {
 			isa = PBXGroup;
 			children = (
+				0182B436178F4A2300FB2D40 /* hit-01.wav */,
+				0182B434178F49B700FB2D40 /* hit-pipe.wav */,
 				0161466A178F2854008D08B8 /* CraigAppDelegate.h */,
 				0161466B178F2854008D08B8 /* CraigAppDelegate.m */,
 				01614673178F2854008D08B8 /* CraigViewController.h */,
@@ -164,6 +178,8 @@
 				01614670178F2854008D08B8 /* Default@2x.png in Resources */,
 				01614672178F2854008D08B8 /* Default-568h@2x.png in Resources */,
 				01614678178F2854008D08B8 /* CraigViewController.xib in Resources */,
+				0182B435178F49B700FB2D40 /* hit-pipe.wav in Resources */,
+				0182B437178F4A2300FB2D40 /* hit-01.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +309,7 @@
 				0161467D178F2854008D08B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
