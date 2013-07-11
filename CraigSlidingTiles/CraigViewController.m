@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Craig Co. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "CraigViewController.h"
 
 @implementation CraigViewController
@@ -21,10 +22,17 @@
 }
 
 - (UIButton *) addTileWithValue: (int)value atPosition: (int)position {
-    UIButton *myTile = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *myTile;
+    if(value > 0) {
+        myTile = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    } else {
+        myTile = [UIButton buttonWithType:UIButtonTypeCustom];
+        myTile.backgroundColor = [UIColor clearColor];
+        myTile.layer.borderColor = [UIColor clearColor].CGColor;
+    }
     [myTile setTitle:[NSString stringWithFormat:@"%d", value] forState:UIControlStateNormal];
     [myTile setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    myTile.titleLabel.font = [UIFont boldSystemFontOfSize:25.0];
+    myTile.titleLabel.font = [UIFont boldSystemFontOfSize:30.0];
     myTile.frame = [self getRectForObjectAtIndex: position];
     [myTile addTarget:self action:@selector(tileTapped:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -140,11 +148,16 @@
     [gameValues exchangeObjectAtIndex:fromIndex withObjectAtIndex:toIndex];
     [gameViews exchangeObjectAtIndex:fromIndex withObjectAtIndex:toIndex];
     
-    UIButton *fromButton = [gameViews objectAtIndex:fromIndex];
-    UIButton *toButton = [gameViews objectAtIndex:toIndex];
+    UIButton *zeroButton = [gameViews objectAtIndex:fromIndex];
+    zeroButton.hidden = YES;
+    UIButton *movedButton = [gameViews objectAtIndex:toIndex];
     
-    fromButton.frame = [self getRectForObjectAtIndex:fromIndex];
-    toButton.frame = [self getRectForObjectAtIndex:toIndex];
+    [UIView animateWithDuration:0.3 animations:^{
+        movedButton.frame = [self getRectForObjectAtIndex:toIndex];
+    } completion:^(BOOL finished){
+        zeroButton.frame = [self getRectForObjectAtIndex:fromIndex];
+        zeroButton.hidden = NO;
+    }];
 }
 
 - (CGRect) getRectForObjectAtIndex: (int)index {
