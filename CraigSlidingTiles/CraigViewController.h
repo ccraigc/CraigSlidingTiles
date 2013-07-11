@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CraigViewController : UIViewController {
+    BOOL gameInProgress;
     NSMutableArray *gameValues; // zero is open
     NSMutableArray *gameViews;
 }
@@ -22,6 +23,8 @@
 - (IBAction) startOverTapped:(id)sender;
 
 - (void) tileTapped:(id)sender;
+
+- (void) moveFrom:(int)fromIndex to:(int)toIndex;
 
 @property IBOutlet UIView *gameBoard;
 @property IBOutlet UILabel *winNotice;
