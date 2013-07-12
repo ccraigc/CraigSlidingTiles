@@ -111,14 +111,32 @@
 }
 
 - (BOOL) checkWin {
-    // check for order
-    for (int i = 0; i < 16; i++) {
+    BOOL pass = YES;
+    int i;
+    
+    // check for order starting at 0
+    for (i = 0; i < 16; i++) {
         int posValue = [[gameValues objectAtIndex:i] intValue];
         
-        if(i != posValue) return NO;
+        if(i != posValue) { pass = NO; }
     }
-    //if([[gameValues objectAtIndex:0] intValue]) return NO;
-    return YES;
+    
+    if(pass == NO) {
+        pass = YES;
+        // check for order starting at 1
+        for( i = 0; i < 16; i++) {
+            int checkValue = i+1;
+            if(checkValue > 15) checkValue = 0; // 0 at end.
+            
+            int posValue = [[gameValues objectAtIndex:i] intValue];
+            
+            if(checkValue != posValue) {
+                pass = NO;
+            }
+        }
+    }
+    
+    return pass;
 }
 
 - (void)handleWin {

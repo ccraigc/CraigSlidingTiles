@@ -19,6 +19,7 @@
     self.viewController = [[CraigViewController alloc] initWithNibName:@"CraigViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
